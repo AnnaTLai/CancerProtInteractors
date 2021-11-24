@@ -1,0 +1,29 @@
+---
+title: "Introduction_CancerProtInteractors"
+author: "Anna Teresa Lai"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_CancerProtInteractors}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CancerProtInteractors)
+```
+
+## Package References
+
+[Lai, A. (2021) CancerProtInteractors: Data visualization and analysis for Y2H experiment on cancer marker genes. Unpublished.](https://github.com/AnnaTLai/CancerProtInteractors)
+
+```{r}
+sessionInfo()
+```

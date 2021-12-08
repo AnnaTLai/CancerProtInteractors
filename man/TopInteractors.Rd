@@ -4,22 +4,21 @@
 \alias{TopInteractors}
 \title{Get top n protein interactors.}
 \usage{
-TopInteractors(baitA, baitB, n, protein)
+TopInteractors(Y2H_output, n, protein)
 }
 \value{
 Returns top n intdeveractors with the protein of interest.
 }
 \description{
-A function that utilize the Y2H-SCORES software functions (Banerjee et al., 2020) to find the top n interactors with the protein of interest.
-to work.
+A function that uses the output data from Y2H-SCORES software functions (Banerjee et al., 2020) to find the top n interactors with the protein of interest.
+to work. POI stands for protein of interest.
 }
 \examples{
 \dontrun{
 
-CancerProtInteractors::TopInteractors(baitA = filename,
-                                      baitB = filename2,
+CancerProtInteractors::VisTopInteractors(Y2H_output = data_structure,
                                       n = 10,
-                                      protein = list_of_proteins)
+                                      protein = name_of_POI)
 }
 
 }

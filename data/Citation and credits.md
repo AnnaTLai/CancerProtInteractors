@@ -1,6 +1,6 @@
 ## 4 Functions from Y2H-SCORES
 
-The functions enrichment_score, in_frame_score, run_scores, and spec_score are functions developed by Wiselab2 available at \href{https://github.com/Wiselab2/Y2H-SCORES/tree/master/Software}{Link}.
+The dataset total_scores is an example output from using the Y2H-SCORES Wiselab2 available at \href{https://github.com/Wiselab2/Y2H-SCORES/tree/master/Software/example_output_toy_dataset}{Link}.It serves as the input of TopInteractors.
 
 ## Citation
 

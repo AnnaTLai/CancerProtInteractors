@@ -3,24 +3,29 @@
 \docType{data}
 \name{Y2HSCORES_output}
 \alias{Y2HSCORES_output}
-\title{Gene Counts From An RNAseq Experiment 1}
+\title{Example output get from running the software Y2H-SCORES.}
 \format{
 A matrix with columns:
 \describe{
-\item{Condition.1}{First condition, under which least light was provided
+\item{prey}{First condition, under which least light was provided
 to plants.}
-\item{Condition.2}{Second condition, under which most light was provided to plants.}
-\item{Condition.3}{Third condition, the control.}
+\item{bait}{indicate whihc bait was used, either bait 1 or bait 2.}
+\item{Enrichment_score}{Third condition, the control.}
+\item{Specificity_score}{A caculated value that ranges from 0 - 1}
+\item{In_frame_score}{A caculated value.}
+\item{In_frame_prey_transcripts}{A caculated value.}
+\item{Sum_scores}{A caculated value that ranges from 0 - 1}
+\item{Borda_scores}{A caculated value.}
 }
 }
 \source{
-University of Guelph, Canada.
+Banerjee et al., 2020
 }
 \usage{
 Y2HSCORES_output
 }
 \description{
-An RNAseq experiment conductd using bean plants from 2016 in Canada.
+This data files was not generated from real protein-protein interaction data.
 }
 \examples{
 \dontrun{

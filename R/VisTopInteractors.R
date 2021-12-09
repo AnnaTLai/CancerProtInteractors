@@ -40,8 +40,11 @@ VisTopInteractors <- function(proteins, poi) {
 
 # [END]
 
-VisTopInteractors(proteinss, "example_poi")
-view(proteins$Borda_scores)
-view(Y2HSCORES_output)
-library(ggplot2)
+# Testing
+# VisTopInteractors(proteinss, "example_poi")
+
+# For dev
+# view(proteins$Borda_scores)
+# view(Y2HSCORES_output)
+# library(ggplot2)
 

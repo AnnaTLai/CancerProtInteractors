@@ -42,6 +42,4 @@ TopInteractors <- function(Y2H_output, n) {
 
 # Testing
 # view(TopInteractors(Y2HSCORES_output, 20))
-
-library(tidyverse)
-proteins <- TopInteractors(Y2HSCORES_output, 20)
+# proteinss <- TopInteractors(Y2HSCORES_output, 20)

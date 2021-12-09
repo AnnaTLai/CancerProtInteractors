@@ -4,7 +4,7 @@
 \alias{TopInteractors}
 \title{Get top n protein interactors.}
 \usage{
-TopInteractors(Y2H_output, n, protein)
+TopInteractors(Y2H_output, n)
 }
 \value{
 Returns top n intdeveractors with the protein of interest.
@@ -17,8 +17,7 @@ to work. POI stands for protein of interest.
 \dontrun{
 
 CancerProtInteractors::VisTopInteractors(Y2H_output = data_structure,
-                                      n = 10,
-                                      protein = name_of_POI)
+                                      n = 10)
 }
 
 }

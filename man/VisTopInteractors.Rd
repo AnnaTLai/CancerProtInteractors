@@ -16,7 +16,8 @@ to work.
 \examples{
 \dontrun{
 
-CancerProtInteractors::TopInteractors( proteins = list_of_top_interacting_proteins)
+CancerProtInteractors::VisTopInteractors( proteins = list_of_top_interacting_proteins <dataframe consist of prey, Borda_scores>,
+                                          poi = name of protein of interest <chr>)
 }
 
 }

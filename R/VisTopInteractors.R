@@ -14,7 +14,7 @@
 #'
 #' @references
 #' @export
-#' @importFrom ggplot2
+#' @importFrom ggplot2 ggplot
 
 VisTopInteractors <- function(proteins, poi) {
 

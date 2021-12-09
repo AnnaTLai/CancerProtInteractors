@@ -4,7 +4,7 @@
 \alias{VisTopInteractors}
 \title{A bar graph of the top n protein interactors.}
 \usage{
-VisTopInteractors(baitA, baitB, n, protein)
+VisTopInteractors(proteins, poi)
 }
 \value{
 Returns a bar graph that visualizese the top n proteins generated from TopInteractors function

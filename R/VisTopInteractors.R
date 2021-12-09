@@ -8,16 +8,40 @@
 #' @examples
 #' \dontrun{
 #'
-#' CancerProtInteractors::TopInteractors( proteins = list_of_top_interacting_proteins)
+#' CancerProtInteractors::VisTopInteractors( proteins = list_of_top_interacting_proteins <dataframe consist of prey, Borda_scores>,
+#'                                           poi = name of protein of interest <chr>)
 #' }
 #'
 #' @references
 #' @export
-#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2
 
-VisTopInteractors <- function(baitA, baitB, n, protein) {
-  print("second function")
-  return()
+VisTopInteractors <- function(proteins, poi) {
+
+  if(is.null(proteins) | is.null(poi)){
+    message("No input for proteins is defined. Please input a valid dataset.")
+    return()
+
+  }else if (is.null(poi)){
+    message("No name of protein of interest is provided. Using poi as the default.")
+    poi <- 'poi'
+  }
+
+  plot <- ggplot2::ggplot(data=proteins , aes(x=reorder(prey, Borda_scores), y=Borda_scores)) +
+    geom_bar(stat="identity", width=0.7 ,position="dodge")+
+    labs(title= paste0("Top ", length(proteins$prey), " protein interactors for ", poi))+
+    xlab(paste0("Protein interactors of ", poi))+
+    ylab("Ineracting strength \n (Borda Score calcualted by Y2HSCORES)")+
+    theme(axis.text.x = element_text(vjust = 0.5, hjust=1)) +
+    coord_flip()
+
+  return(plot)
 }
 
 # [END]
+
+VisTopInteractors(proteinss, "example_poi")
+view(proteins$Borda_scores)
+view(Y2HSCORES_output)
+library(ggplot2)
+

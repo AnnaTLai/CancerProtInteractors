@@ -8,16 +8,17 @@ Description: Finds the top interactors of a suspected cancer gene marker from Y2
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 4.1.1)
+Depends: 
+    R (>= 4.1.1),
+    tidyverse
 biocViews:
 Remotes: 
     github::hadley/ggplot2
 Imports: 
-    reshape2, 
-    tidyverse, 
-    psych, 
-    DESeq2, 
-    MASS, 
+    reshape2,
+    psych,
+    DESeq2,
+    MASS,
     optparse,
     ggplot2
 Roxygen: list(markdown = TRUE)

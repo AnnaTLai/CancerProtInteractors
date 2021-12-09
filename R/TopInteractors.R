@@ -9,8 +9,7 @@
 #' \dontrun{
 #'
 #' CancerProtInteractors::VisTopInteractors(Y2H_output = data_structure,
-#'                                       n = 10,
-#'                                       protein = name_of_POI)
+#'                                       n = 10)
 #' }
 #'
 #' @references
@@ -20,9 +19,29 @@
 #' @export
 #' @importFrom ggplot2 ggplot
 
-TopInteractors <- function(Y2H_output, n, protein) {
-  print("first function")
-  return()
+TopInteractors <- function(Y2H_output, n) {
+
+  if(is.null(Y2H_output) | is.null(n)){
+    message("No input for Y2H_output is defined. Please input a valid dataset.")
+    return()
+
+    }else if (is.null(n) | !is.numeric(n)){
+    message("No number of proteins n specified or input n is not a number. Using 10 as the default.")
+    n <- 10
+  }
+
+  top_n <- Y2H_output %>%
+    select(prey, Borda_scores) %>%
+    as.data.frame() %>%
+    arrange(desc(Borda_scores))
+
+  return(top_n[1:n,])
 }
 
 # [END]
+
+# Testing
+# view(TopInteractors(Y2HSCORES_output, 20))
+
+library(tidyverse)
+proteins <- TopInteractors(Y2HSCORES_output, 20)
